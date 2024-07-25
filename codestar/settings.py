@@ -32,6 +32,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '.localhost',
     '.herokuapp.com',
+    '.8000-cal009-djangoblog-movqrj7ck61.ws.codeinstitute-ide.net'
 ]
 
 
@@ -90,8 +91,9 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.herokuapp.com"
-    "http://*localhost:8000"
+    "https://*.herokuapp.com",
+    "http://*localhost:8000",
+    "https://8000-cal009-djangoblog-movqrj7ck61.ws.codeinstitute-ide.net"
 ]
 
 
