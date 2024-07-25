@@ -90,6 +90,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.herokuapp.com"
+    "http://*localhost:8000"
 ]
 
 
