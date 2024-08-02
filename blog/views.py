@@ -7,6 +7,11 @@ from .forms import CommentForm
 
 # Create your views here.
 
+def LikeView(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    post.likes.add(request.user)
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
