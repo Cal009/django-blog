@@ -37,11 +37,11 @@
   </div>
   <hr>
   <br?>
-  <form action="{% url 'like_post' post.slug %}" method="POST">
+  <form action="{% url 'like_post' post.pk %}" method="POST">
     {% csrf_token %}
     <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
   </form>
-  <br/><br/>
+
   <!-- Displaying count of comments -->
   <div class="row">
     <div class="col-12">

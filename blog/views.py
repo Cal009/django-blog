@@ -18,6 +18,12 @@ class PostList(generic.ListView):
     template_name = "blog/index.html"
     paginate_by = 6
 
+# def get_context_data(self, *args, **kwargs):
+#     items = get_object_or_404(Post, id=self.kwargs['pk'])
+#     total_likes = items.total_likes()
+#     context["total_likes"] = total_likes
+#     return context
+
 
 def post_detail(request, slug):
     """

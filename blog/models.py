@@ -22,6 +22,9 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     likes = models.ManyToManyField(User, related_name='news_post')
 
+    def total_likes(self):
+        return self.likes.count()
+
     class Meta:
         ordering = ["-created_on"]
     
